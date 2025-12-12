@@ -3,7 +3,7 @@
 This repository studies whether machine learning models can recover the Earth’s motion and physical parameters using only indirect observations of other celestial bodies.  
 The project combines **Physics-Informed Neural Networks (PINNs)** and **data-driven sequence models (LSTMs)** to address dynamics recovery and forecasting under partial observability.
 
----
+
 
 ## Repository Structure
 
@@ -24,7 +24,7 @@ This file contains all core models and utilities used throughout the experiments
 
 All experiments import models directly from this file.
 
----
+
 
 ### Notebooks
 
@@ -42,7 +42,7 @@ All experiments import models directly from this file.
   - Using all bodies’ past states,
   - Using Earth-only historical data.
 
----
+
 
 ### Simulation Code
 
@@ -50,16 +50,3 @@ All experiments import models directly from this file.
   C implementation of the Solar System simulation using the REBOUND N-body integrator.
   Generates high-precision trajectory data (`state.csv`) used by all learning models.
 
----
-
-## Summary
-
-- PINNs enforce Newtonian dynamics to recover hidden states and physical parameters.
-- LSTMs provide data-driven baselines for short-term forecasting.
-- All models and losses are defined in `functions.py`; notebooks focus on experimentation and analysis.
-
----
-
-## Notes
-
-- The `oscillator_sindy.ipynb` notebook is unrelated to the Solar System experiments and can be ignored.
